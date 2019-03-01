@@ -1,0 +1,7 @@
+//use this code if you are having a tough time figuring it out.
+            //Get input from user
+            string episodeTitle = txtEpisodeName.Text;
+            int episodePosition = fullOutput.IndexOf(episodeTitle);
+            int seasonStart = fullOutput.IndexOf("season", episodePosition)+8;
+            int seasonEnd = fullOutput.IndexOf(",", seasonStart);
+            MessageBox.Show(fullOutput.Substring(seasonStart, seasonEnd-seasonStart));
